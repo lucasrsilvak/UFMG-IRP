@@ -226,10 +226,10 @@ def rodar_busca_sigmoid(nome_dataset):
         plt.savefig(nome)
         plt.close()
 
-    salvar_imagem(score_grid, 'viridis', f"{nome_dataset.upper()} - Score Combinado", f"{nome_dataset}_grid_sigmoid.pdf")
-    salvar_imagem(acc_test_grid, 'plasma', f"{nome_dataset.upper()} - Acurácia de Teste", f"{nome_dataset}_grid_acuracia_teste.pdf")
-    salvar_imagem(gap_grid, 'viridis', f"{nome_dataset.upper()} - Gap Statistic", f"{nome_dataset}_grid_gap.pdf")
-    salvar_imagem(metrica_grid, 'cividis', f"{nome_dataset.upper()} - Métrica Combinada", f"{nome_dataset}_grid_metrica_combinada.pdf")
+    salvar_imagem(score_grid, 'viridis', f"{nome_dataset.upper()} - Score Combinado", f"results/{nome_dataset}_grid_sigmoid.pdf")
+    salvar_imagem(acc_test_grid, 'plasma', f"{nome_dataset.upper()} - Acurácia de Teste", f"results/{nome_dataset}_grid_acuracia_teste.pdf")
+    salvar_imagem(gap_grid, 'viridis', f"{nome_dataset.upper()} - Gap Statistic", f"results/{nome_dataset}_grid_gap.pdf")
+    salvar_imagem(metrica_grid, 'cividis', f"{nome_dataset.upper()} - Métrica Combinada", f"results/{nome_dataset}_grid_metrica_combinada.pdf")
 
     # === Superfície 3D ===
     G, C0 = np.meshgrid(coef0s, gammas)
@@ -242,7 +242,7 @@ def rodar_busca_sigmoid(nome_dataset):
     ax.set_title(f"{nome_dataset.upper()} - Superfície do Score (Sigmoid)")
     fig.colorbar(surf, ax=ax, shrink=0.5, aspect=5)
     plt.tight_layout()
-    plt.savefig(f"{nome_dataset}_superficie_sigmoid.pdf")
+    plt.savefig(f"results/{nome_dataset}_superficie_sigmoid.pdf")
     plt.close()
 
     print(f"\nMelhor combinação encontrada:")
