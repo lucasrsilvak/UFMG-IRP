@@ -38,7 +38,7 @@ def plot_espaco_verossimilhanca(pall_train, y_train, y_kmeans, h, j, nome_datase
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(f"results2/{nome_dataset}_espaco_verossimilhanca_{kernel}_h{h:.2f}_c{j:.2f}_{sufixo}.pdf")
+    plt.savefig(f"results/{nome_dataset}_espaco_verossimilhanca_{kernel}_h{h:.2f}_c{j:.2f}_{sufixo}.pdf")
     plt.close()
 
 def alinhar_labels(y_true, y_pred):
